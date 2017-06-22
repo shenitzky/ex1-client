@@ -1,0 +1,24 @@
+.btn {
+    padding: 7px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #51bfff;
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    display: inline;
+}
+ 
+input[type=text], input[type=number]{
+    width: 220px;
+    display: inline;
+}
+
+.label_space {
+    margin-right: 8px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}

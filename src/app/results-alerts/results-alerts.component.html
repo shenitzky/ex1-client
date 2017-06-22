@@ -1,0 +1,35 @@
+<div class="container">        
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>User name</th>
+        <th>password</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Email</th>
+        <th>logging alerts</th>
+        <th>Recognized_devices</th>
+        <th>Phone number</th>
+        <th>Devices</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let alert of securityAlertsService.alerts">
+        <td>{{alert.id}}</td>
+        <td>{{alert.userName}}</td>
+        <td>{{alert.password}}</td>
+        <td>{{alert.firstName}}</td>
+        <td>{{alert.lastName}}</td>
+        <td>{{alert.email}}</td>
+        <th>{{alert.loggingAlerts}}</th>
+        <th>{{alert.recognizedDevices}}</th>
+        <th>{{alert.phoneNumber}}</th>
+        <th>{{alert.devicesNumber}}</th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+  <button type="submit" class="btn btn-primary" routerLink="/">Go Back</button>
+</div>

@@ -1,0 +1,45 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="nanbar-header">
+      <a href="#" class="navbar-brand">Security Settings WS</a>
+    </div>
+      <button type="submit" class="btn btn-primary" (click)="getUserById()" routerLink="/getUserById">Get user by id</button>
+      <input type="text" class="form-control" placeholder="used id" [(ngModel)]="userId">
+      <button type="submit" class="btn btn-primary" (click)="getAlertsDevicesNumberCross()" routerLink="/getAlertsDevicesNumberCross">Get Alerts Devices Number Cross</button>
+      <label><input type="radio" value=true [(ngModel)]="logginAlerts">true</label>
+      <label><input type="radio" value=false class="label_space" [(ngModel)]="logginAlerts">fales</label>
+      <input type="number" class="form-control" placeholder="minimum recognized devices" [(ngModel)]="minDevNum">
+  </div>
+</nav>
+<div class="container">        
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>User name</th>
+        <th>password</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Email</th>
+        <th>logging alerts</th>
+        <th>Recognized_devices</th>
+        <th>Phone number</th>
+        <th>Devices</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let alert of securityAlertsService.alerts">
+        <td>{{alert.id}}</td>
+        <td>{{alert.userName}}</td>
+        <td>{{alert.password}}</td>
+        <td>{{alert.firstName}}</td>
+        <td>{{alert.lastName}}</td>
+        <td>{{alert.email}}</td>
+        <th>{{alert.loggingAlerts}}</th>
+        <th>{{alert.recognizedDevices}}</th>
+        <th>{{alert.phoneNumber}}</th>
+        <th>{{alert.devicesNumber}}</th>
+      </tr>
+    </tbody>
+  </table>
+</div>
